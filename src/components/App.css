@@ -1,0 +1,92 @@
+.App {
+  text-align: center;
+  width: 100%;
+}
+
+.App-logo {
+  height: 20vmin;
+  pointer-events: none;
+   
+}
+.App-cartel {
+  margin-bottom: 110%;
+  height: 30vmin;
+}
+.landing {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 100%;
+}
+.sideBar {
+  width: 100%;
+  background-color: black;
+  color: white;
+  display: flex;
+  flex-direction: row;
+  
+}
+.sideBar-titles {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  
+}
+.sideBar-titles h2 {
+  margin-right: 10%;
+ }
+.sideBar-h1{
+  align-items: center;
+  display: flex;
+  justify-content: flex-start;
+  margin-right:44%;
+  margin-left: 10%;
+  color:#F9B233;
+}
+
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin 1 3s linear;
+  }
+}
+
+.App-header {
+  background-color: #F9B233;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    margin-left: 60%;
+   
+  }
+
+  to {
+    margin-left: 0%;
+   
+  }
+}
+
+
+
+@media screen and (max-width: 1200px) {
+  .sideBar-titles {
+    font-size: 65%; }
+  .sideBar-titles h2 {
+    margin-right: 5%;
+  }
+  .sideBar-h1 {
+    margin-right: 35%;
+  }  
+  }
