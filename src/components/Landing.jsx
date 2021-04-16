@@ -1,23 +1,9 @@
-
 import './App.css';
 
 function App() {
   return (
     <div className='landing'>
-    <div className='sideBar'>
-      <div className='sideBar-h1'>
-      <h1>EstacionAr</h1>
-
-      </div>
-      <div className='sideBar-titles'>
-      <h2>HOME</h2>
-      <h2>AUTOS</h2>
-      <h2>USUARIOS</h2>
-      <h2>ADMINS</h2>
-
-      </div>
-      
-    </div>
+    
 
     <div className="App">
       <header className="App-header">

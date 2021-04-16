@@ -8,6 +8,7 @@
   pointer-events: none;
    
 }
+
 .App-cartel {
   margin-bottom: 110%;
   height: 30vmin;
@@ -25,6 +26,7 @@
   display: flex;
   flex-direction: row;
   
+  
 }
 .sideBar-titles {
   display: flex;
@@ -32,9 +34,7 @@
   align-items: center;
   
 }
-.sideBar-titles h2 {
-  margin-right: 10%;
- }
+
 .sideBar-h1{
   align-items: center;
   display: flex;
@@ -43,6 +43,39 @@
   margin-left: 10%;
   color:#F9B233;
 }
+.link {
+  text-decoration: none;
+  color:white;
+  margin-right: 10%;
+}
+.cars {
+  border-collapse: collapse;
+  font-size: 120%;
+  font-weight: bold;
+  margin-top:2%;
+  width:100%;
+  }
+  .cars  th {
+    border: 1px solid #000;
+    margin: 15px;
+    padding: 15px;
+    text-align: center;
+   
+  }
+  .cars  td {
+    border: 1px solid #000;
+    margin: 15px;
+    padding: 15px;
+    text-align: center;
+   
+  }
+  .link2 {
+    text-decoration: none;
+    color:black
+  }
+  
+ 
+
 
 
 @media (prefers-reduced-motion: no-preference) {
