@@ -1,3 +1,4 @@
+/* LANDING STYLES --------------------------------------*/
 .App {
   text-align: center;
   width: 100%;
@@ -8,6 +9,7 @@
   pointer-events: none;
    
 }
+
 .App-cartel {
   margin-bottom: 110%;
   height: 30vmin;
@@ -17,31 +19,6 @@
   flex-direction: column;
   justify-content: space-around;
   width: 100%;
-}
-.sideBar {
-  width: 100%;
-  background-color: black;
-  color: white;
-  display: flex;
-  flex-direction: row;
-  
-}
-.sideBar-titles {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  
-}
-.sideBar-titles h2 {
-  margin-right: 10%;
- }
-.sideBar-h1{
-  align-items: center;
-  display: flex;
-  justify-content: flex-start;
-  margin-right:44%;
-  margin-left: 10%;
-  color:#F9B233;
 }
 
 
@@ -78,15 +55,185 @@
   }
 }
 
+/* ---------------------------------------------------- */
+/* SIDEBAR STYLES --------------------------------------*/
+.sideBar {
+  width: 100%;
+  background-color: black;
+  color: white;
+  display: flex;
+  flex-direction: row;
+  
+  
+}
+.sideBar-titles {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  
+}
 
+.sideBar-h1{
+  align-items: center;
+  display: flex;
+  justify-content: flex-start;
+  margin-right:44%;
+  margin-left: 10%;
+  color:#F9B233;
+}
+.link {
+  text-decoration: none;
+  color:white;
+  margin-right: 10%;
+}
+.link4 {
+  text-decoration: none;
+  color:#F9B233;
+}
+/* ---------------------------------------------------- */
+/* USER STYLES ---------------------------------------- */
+.cars {
+  border-collapse: collapse;
+  font-size: 120%;
+  font-weight: bold;
+  margin-top:2%;
+  width:100%;
+  }
+  .cars  th {
+    border: 1px solid #000;
+    margin: 15px;
+    padding: 15px;
+    text-align: center;
+    
+  }
+  .cars  td {
+    border: 1px solid #000;
+    margin: 15px;
+    padding: 15px;
+    text-align: center;
+    
+  }
+  .user:hover {
+    transition: all 200ms ease;
+    -webkit-transform: scale(1.4);
+    -ms-transform: scale(1.4);
+    transform: scale(1.4);
+    
+  }
+  .link2 {
+    text-decoration: none;
+    color:black
+  }
+  
+  .clickeable:hover {
+    transition: all 200ms ease;
+    -webkit-transform: scale(1.4);
+    -ms-transform: scale(1.4);
+    transform: scale(1.4);
+  }
+  /* ------------------------------------------------------- */
+/* USER CARS STYLES ---------------------------------------- */
 
-@media screen and (max-width: 1200px) {
-  .sideBar-titles {
-    font-size: 65%; }
-  .sideBar-titles h2 {
-    margin-right: 5%;
+  .boton {
+    margin-right: 10%;
+    margin-top:3%;
+    float: right;
+    color:white;
+    background-color: black;
+    border: 5px solid black
   }
-  .sideBar-h1 {
-    margin-right: 35%;
-  }  
+  /* ------------------------------------------------------- */
+/* ADMIN STYLES ---------------------------------------- */
+ 
+  .newAdmin {
+    text-align: center;
+    font-size: 120%;
+    font-weight: bold;
+    margin-top:2%;
+    border: 1px solid ;
+    width: 25%;
+    background-color: black;
+    margin-left: 37.5%;
+    color:white;
   }
+
+  
+
+  .newAdmin:hover {
+    transition: all 200ms ease;
+    -webkit-transform: scale(1.4);
+    -ms-transform: scale(1.4);
+    transform: scale(1.4);
+    
+    
+  }
+  .link3 {
+    text-decoration: none;
+    color:white;
+  }
+
+  .link3:hover {
+    color:#F9B233;
+  }
+  
+
+  /* ------------------------------------------------------- */
+/* NEW ADMIN STYLES ---------------------------------------- */
+
+.form {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+}
+
+.form p {
+  color:black;
+  font-size: 150%;
+  font-weight: bold;
+  float: left;
+  margin-left: 25%;
+  }
+
+  .form input {
+    margin-left: 25%;
+    margin-top: 2%;
+    height: 30px;
+    border-radius: .375rem;
+    border: solid 2px darkgrey;
+    font-size: 100%;
+  }
+
+  
+
+  .submit {
+    margin-bottom: 5%;
+    border-radius: .375rem;
+    font-size: 120%;
+    background-color: #666666;
+    color:white;
+    font-weight: bold;
+  
+  }
+
+  .submit:hover {
+    background-color: black;
+  }
+
+    /* ------------------------------------------------------- */
+    /* MEDIA QUERYS STYLES ---------------------------------------- */
+
+  
+  @media screen and (max-width: 1200px) {
+    .sideBar-titles {
+      font-size: 65%; }
+    .sideBar-titles h2 {
+      margin-right: 5%;
+    }
+    .sideBar-h1 {
+      margin-right: 35%;
+    }
+    .cars {
+      width: 100%;
+    }
+    }
+  
