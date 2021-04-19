@@ -1,4 +1,5 @@
 import React,{useEffect, useState} from 'react'
+import {Link} from 'react-router-dom'
 import firebase from '../back/db/firebase'
 const Cars = ({id}) => {
     const [cars,setCars]=useState([])
@@ -46,6 +47,11 @@ console.log(cars)
             </tr>
                 ))}
         </table>
+        <p className='boton'>
+          <Link to='/usuarios' className='link'>
+      VOLVER
+          </Link>
+    </p>
       </>
     );
 };

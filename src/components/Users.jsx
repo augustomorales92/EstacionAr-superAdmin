@@ -1,5 +1,7 @@
 import React,{useEffect, useState} from 'react'
 import {Link} from 'react-router-dom'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import {faTrashAlt} from '@fortawesome/free-solid-svg-icons'
 import firebase from '../back/db/firebase'
 const Users = () => {
     
@@ -15,12 +17,21 @@ useEffect( ()=>{
           return setUsers(usuarios)
       });
 },[])
-console.log(users)
+
+const deleteUser = (id) => {
+  return firebase.db
+       .collection("users")
+       .doc(id)
+       .delete()
+       .then(()=>{console.log('admin eliminado correctamente')})
+     .catch((error) => alert("eliminado incorrectamente", error.message));
+ }
+
     
 return (
         <>
         <table className="cars">
-        <th COLSPAN="5">
+        <th COLSPAN="6">
          <h3>USUARIOS</h3>
       </th>
         <tr>
@@ -29,21 +40,24 @@ return (
         <th>EMAIL</th>
         <th>CREDITO</th>
         <th>HISTORIAL</th>
+        <th></th>
         </tr>
         {users.map(usuario =>(
             <tr>
-            <td>
+            <td className='user'>
             <Link to={`/autos/${usuario.id}`} className='link2'>
                 {usuario.name}
             </Link>
                 </td>
-            <td>{usuario.lastname}</td>
+            <td >{usuario.lastname}</td>
             <td>{usuario.email}</td>
             <td>{usuario.credit}</td>
             <td>{usuario.parkingHistory? usuario.parkingHistory.length : 0}</td>
+            <td><p className='clickeable'><FontAwesomeIcon icon={faTrashAlt} color="black" size="2x" onClick={()=>{deleteUser(usuario.id)}}/></p></td>
         </tr>
         ))}
     </table>
+    
   </>
     );
 };

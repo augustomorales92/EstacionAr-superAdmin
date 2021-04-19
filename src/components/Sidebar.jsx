@@ -6,18 +6,18 @@ const sidebar = () => {
         <div >
         <div className='sideBar'>
       <div className='sideBar-h1'>
+      <Link to='/' className='link4'>
       <h1>EstacionAr</h1>
+      </Link>
 
       </div>
       <div className='sideBar-titles'>
-    <Link to='/' className='link'>
-      <h2>HOME</h2>
-    </Link>
+    
    
     <Link to='/usuarios' className='link'>
       <h2>USUARIOS</h2>
     </Link>
-    <Link to='/' className='link'>
+    <Link to='/admins' className='link'>
       <h2>ADMINS</h2>
     </Link>
       </div>
