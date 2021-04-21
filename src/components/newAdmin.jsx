@@ -41,7 +41,8 @@ const NewAdmin = () => {
                 name,
                 lastname,
                 email,
-                zone
+                zone,
+                workedDays:[]
               })
               .then(() => {
                  console.log("admin registrado exitosamente");
