@@ -20,6 +20,7 @@ const sidebar = () => {
     <Link to='/admins' className='link'>
       <h2>ADMINS</h2>
     </Link>
+    
       </div>
       
     </div>

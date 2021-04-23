@@ -50,7 +50,9 @@ return (
         </tr>
         {Admins.map(admin =>(
             <tr>
-            <td>{admin.name}</td>
+            <td className='user'>  <Link to={`/support/${admin.id}`} className='link2'>
+                {admin.name}
+            </Link></td>
             <td>{admin.lastname}</td>
             <td>{admin.email}</td>
             <td>{admin.zone}</td>

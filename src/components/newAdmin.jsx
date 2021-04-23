@@ -13,13 +13,12 @@ const NewAdmin = () => {
         password: "",
         zone:""
       });
+      const [cred, setCred] = useState('')
 
       const handleChangeText = (value,e) => {
           
         setInput({ ...input, [value]: e.target.value });
       };
-
-     console.log(input)
 
       const handleSubmit = (event) => {
         saveNewUser()
@@ -33,6 +32,7 @@ const NewAdmin = () => {
         firebase.auth
           .createUserWithEmailAndPassword(email, password)
           .then((cred) => {
+            setCred(cred.user.uid)
             return firebase.db
               .collection("admin")
               .doc(cred.user.uid)
@@ -44,23 +44,24 @@ const NewAdmin = () => {
                 zone,
                 workedDays:[]
               })
-              .then(() => {
-                 console.log("admin registrado exitosamente");
+              .then(()=>{
+                  console.log("admin registrado exitosamente");
                  
                  setInput({
-                    name: "",
-                    lastname: "",
-                    email: "",
-                    password: "",
-                    zone:""
-                  })
-                 
-                  history.push("/admins")
+                  name: "",
+                  lastname: "",
+                  email: "",
+                  password: "",
+                  zone:""
+                })
+                history.push("/admins")
                 })
        
           })
           .catch((error) => alert("Registro incorrecto", error.message));
-        }
+}
+
+     
     return (
         <div >
         <form className='form' onSubmit={(e)=>{handleSubmit(e)}}>

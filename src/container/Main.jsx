@@ -7,7 +7,7 @@ import Users from '../components/Users'
 import Sidebar from '../components/Sidebar'
 import Admins from '../components/Admin'
 import newAdmins from '../components/newAdmin'
-
+import Support from '../components/Support'
 const Main = () => {
     return (
         <>
@@ -18,6 +18,7 @@ const Main = () => {
             <Route exact path="/usuarios" component={Users}/>
             <Route exact path="/admins" component={Admins}/>
             <Route exact path="/admins/nuevoadmin" component={newAdmins}/>
+            <Route exact path="/support/:id" render={({match})=><Support id={match.params.id} />}/>
         </Switch>
         </>
     );
